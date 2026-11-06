@@ -95,6 +95,140 @@
     <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
         <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
         <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Proyecto 1: App Pomodoro con Banner Promocional -->
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 flex flex-col justify-between group">
+                <div>
+                    <!-- Banner promocional de pomodoro -->
+                    <div class="w-full h-52 overflow-hidden bg-slate-950 border-b border-slate-700">
+                        <img src="images/pomodoro.png" alt="Banner Promocional Pomodoro App" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Flutter</span>
+                            <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Dart</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white" data-es="Aplicación Móvil Pomodoro" data-en="Pomodoro Mobile App">Aplicación Móvil Pomodoro</h3>
+                        <p class="text-slate-400 text-sm" data-es="Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido." data-en="Native mobile application for time management and personal productivity, built with Flutter ensuring high performance.">
+                            Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Visión Artificial -->
+            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 flex flex-col justify-between">
+                <div class="p-6 space-y-4">
+                    <div class="flex gap-2">
+                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">OpenCV</span>
+                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Firebase</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white" data-es="Sistema de Visión Artificial" data-en="Computer Vision AI System">Sistema de Visión Artificial</h3>
+                    <p class="text-slate-400 text-sm" data-es="Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube." data-en="Real-time facial detection and recognition with encoded video processing and real-time cloud database integration.">
+                        Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4" data-es="¿Listo para iniciar un proyecto?" data-en="Ready to start a project?">¿Listo para iniciar un proyecto?</h2>
+        <p class="text-slate-400 mb-8" data-es="Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente." data-en="Get a quote for your business or contact me for independent technical consulting.">
+            Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://wa.me/525537452943" target="_blank" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
+                <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+            </a>
+            <a href="mailto:yuxavier132015@gmail.com" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
+                <i class="fas fa-envelope text-lg"></i> Email Directo
+            </a>
+        </div>
+    </section>
+
+    <!-- Language Toggle Script -->
+    <script>
+        let currentLang = 'es';
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            document.querySelectorAll('[data-es]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
+</body>
+</html>
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-6 py-20 text-center md:text-left md:flex items-center justify-between">
+        <div class="md:w-3/5 space-y-6">
+            <span class="px-3 py-1 text-xs font-semibold text-indigo-400 bg-indigo-950/60 border border-indigo-800 rounded-full" 
+                  data-es="Disponible para proyectos Freelance y Remotos" 
+                  data-en="Available for Freelance & Remote Projects">
+                  Disponible para proyectos Freelance y Remotos
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                Xavier Yu Magaña
+            </h1>
+            <p class="text-xl text-indigo-300 font-medium" data-es="Analista de Sistemas & Desarrollador de Software" data-en="Systems Analyst & Software Developer">
+                Analista de Sistemas & Desarrollador de Software
+            </p>
+            <p class="text-slate-400 text-base" data-es="Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes." data-en="Specialized in mobile/web development, AI solutions, databases, and network infrastructure.">
+                Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+                <a href="#contact" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-medium text-white transition shadow-lg shadow-indigo-500/20" data-es="Contactar Ahora" data-en="Get in Touch">Contactar Ahora</a>
+                <a href="https://github.com/XYM117" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 font-medium text-slate-200 border border-slate-700 transition flex items-center gap-2">
+                    <i class="fab font-bold fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Servicios Especializados" data-en="Specialized Services">Servicios Especializados</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Servicio 1 -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
+                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2" data-es="Desarrollo Móvil y Web" data-en="Mobile & Web Development">Desarrollo Móvil y Web</h3>
+                <p class="text-slate-400 text-sm" data-es="Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL." data-en="Cross-platform applications with Flutter and Dart, alongside dynamic web systems powered by Java, Python, and SQL.">
+                    Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL.
+                </p>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
+                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2" data-es="Inteligencia Artificial y Datos" data-en="AI & Data Solutions">Inteligencia Artificial y Datos</h3>
+                <p class="text-slate-400 text-sm" data-es="Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase." data-en="Real-time computer vision with OpenCV, numerical data processing, and cloud synchronization with Firebase.">
+                    Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase.
+                </p>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
+                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2" data-es="Redes y Soporte Técnico" data-en="Networks & Tech Support">Redes y Soporte Técnico</h3>
+                <p class="text-slate-400 text-sm" data-es="Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad." data-en="LAN network design and simulation in Cisco Packet Tracer, hardware/software optimization, and security audits.">
+                    Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
+        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+        <div class="grid md:grid-cols-2 gap-8">
             <!-- Proyecto 1 -->
             <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
                 <div class="p-6 space-y-4">
