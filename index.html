@@ -3,154 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xavier Yu Magaña - Systems Analyst & Software Developer</title>
+    <title>Xavier Yu Magaña - Analista de Sistemas & Desarrollador</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
+<body class="bg-slate-950 text-slate-100 font-sans leading-relaxed selection:bg-indigo-500 selection:text-white">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-indigo-400">XY.dev</span>
-            <div class="flex items-center space-x-6">
-                <nav class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#services" class="hover:text-indigo-400 transition" data-es="Servicios" data-en="Services">Servicios</a>
-                    <a href="#projects" class="hover:text-indigo-400 transition" data-es="Proyectos" data-en="Projects">Proyectos</a>
-                    <a href="#contact" class="hover:text-indigo-400 transition" data-es="Contacto" data-en="Contact">Contacto</a>
-                </nav>
-                <!-- Botón Conmutador de Idioma -->
-                <button id="lang-toggle" onclick="toggleLanguage()" class="px-3 py-1 text-xs font-semibold rounded-md bg-indigo-600 hover:bg-indigo-500 text-white transition">
-                    EN / ES
+    <!-- ENCABEZADO / NAVEGACIÓN -->
+    <div class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80">
+        <header class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="#inicio" class="text-xl font-bold tracking-wider text-indigo-400 hover:text-indigo-300 transition">XY.DEV</a>
+            </div>
+            <nav id="nav" class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#inicio" class="hover:text-indigo-400 transition" data-es="INICIO" data-en="HOME">INICIO</a>
+                <a href="#sobremi" class="hover:text-indigo-400 transition" data-es="SOBRE MÍ" data-en="ABOUT ME">SOBRE MÍ</a>
+                <a href="#portafolio" class="hover:text-indigo-400 transition" data-es="PORTAFOLIO" data-en="PORTFOLIO">PORTAFOLIO</a>
+                <a href="#curriculum" class="hover:text-indigo-400 transition" data-es="CURRÍCULUM" data-en="RESUME">CURRÍCULUM</a>
+                <a href="#habilidades" class="hover:text-indigo-400 transition" data-es="HABILIDADES" data-en="SKILLS">HABILIDADES</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 hover:bg-slate-800 text-indigo-400 border border-slate-700 transition flex items-center gap-2">
+                    <i class="fas fa-globe"></i> <span id="lang-btn-text">EN / ES</span>
                 </button>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 text-center md:text-left md:flex items-center justify-between">
-        <div class="md:w-3/5 space-y-6">
-            <span class="px-3 py-1 text-xs font-semibold text-indigo-400 bg-indigo-950/60 border border-indigo-800 rounded-full" 
-                  data-es="Disponible para proyectos Freelance y Remotos" 
-                  data-en="Available for Freelance & Remote Projects">
-                  Disponible para proyectos Freelance y Remotos
-            </span>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                Xavier Yu Magaña
-            </h1>
-            <p class="text-xl text-indigo-300 font-medium" data-es="Analista de Sistemas & Desarrollador de Software" data-en="Systems Analyst & Software Developer">
-                Analista de Sistemas & Desarrollador de Software
-            </p>
-            <p class="text-slate-400 text-base" data-es="Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes." data-en="Specialized in mobile/web development, AI solutions, databases, and network infrastructure.">
-                Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-                <a href="#contact" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-medium text-white transition shadow-lg shadow-indigo-500/20" data-es="Contactar Ahora" data-en="Get in Touch">Contactar Ahora</a>
-                <a href="https://github.com/XYM117" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 font-medium text-slate-200 border border-slate-700 transition flex items-center gap-2">
-                    <i class="fab font-bold fa-github"></i> GitHub
-                </a>
+    <!-- INICIO -->
+    <section id="inicio" class="max-w-6xl mx-auto px-6 py-20 text-center flex flex-col items-center justify-center min-h-[80vh]">
+        <div class="relative mb-6 group cursor-pointer">
+            <div class="w-36 h-36 rounded-full p-1 bg-gradient-to-tr from-indigo-500 via-purple-500 to-emerald-400 shadow-xl shadow-indigo-500/20">
+                <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden">
+                    <img src="images/xavier.png" alt="Xavier Yu Magaña" class="w-full h-full object-cover">
+                </div>
             </div>
+            <span class="absolute bottom-2 right-2 w-4 h-4 bg-emerald-500 border-2 border-slate-950 rounded-full" title="Disponible para Proyectos"></span>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Servicios Especializados" data-en="Specialized Services">Servicios Especializados</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Servicio 1 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Desarrollo Móvil y Web" data-en="Mobile & Web Development">Desarrollo Móvil y Web</h3>
-                <p class="text-slate-400 text-sm" data-es="Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL." data-en="Cross-platform applications with Flutter and Dart, alongside dynamic web systems powered by Java, Python, and SQL.">
-                    Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL.
-                </p>
-            </div>
-            <!-- Servicio 2 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Inteligencia Artificial y Datos" data-en="AI & Data Solutions">Inteligencia Artificial y Datos</h3>
-                <p class="text-slate-400 text-sm" data-es="Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase." data-en="Real-time computer vision with OpenCV, numerical data processing, and cloud synchronization with Firebase.">
-                    Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase.
-                </p>
-            </div>
-            <!-- Servicio 3 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Redes y Soporte Técnico" data-en="Networks & Tech Support">Redes y Soporte Técnico</h3>
-                <p class="text-slate-400 text-sm" data-es="Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad." data-en="LAN network design and simulation in Cisco Packet Tracer, hardware/software optimization, and security audits.">
-                    Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad.
-                </p>
-            </div>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-2">
+            XAVIER YU MAGAÑA
+        </h1>
+        <h2 class="text-xl md:text-2xl font-medium text-indigo-400 mb-6" data-es="Analista de Sistemas & Desarrollador de Software" data-en="Systems Analyst & Software Developer">
+            Analista de Sistemas & Desarrollador de Software
+        </h2>
+
+        <div class="flex items-center justify-center space-x-5 text-xl mb-8">
+            <a href="https://github.com/XYM117" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500 flex items-center justify-center transition" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://wa.me/525537452943" target="_blank" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500 flex items-center justify-center transition" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:yuxavier132015@gmail.com" class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-indigo-400 hover:border-indigo-500 flex items-center justify-center transition" title="Correo">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <div onclick="copyEmail()" class="cursor-pointer inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-slate-300 text-sm transition group">
+            <span id="email-text">yuxavier132015@gmail.com</span>
+            <i id="copy-icon" class="fas fa-copy text-indigo-400 group-hover:scale-110 transition-transform"></i>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Proyecto 1: App Pomodoro con Banner Promocional -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 flex flex-col justify-between group">
-                <div>
-                    <!-- Banner promocional de pomodoro -->
-                    <div class="w-full h-52 overflow-hidden bg-slate-950 border-b border-slate-700">
-                        <img src="images/pomodoro.png" alt="Banner Promocional Pomodoro App" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+    <!-- ABOUT ME -->
+    <section id="sobremi" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-white" data-es="SOBRE MÍ" data-en="ABOUT ME">SOBRE MÍ</h2>
+            <div class="w-12 h-1 bg-indigo-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="space-y-6 text-slate-300 text-base max-w-4xl mx-auto mb-12">
+            <p data-es="Estudiante de Ingeniería en Computación en la UAM Azcapotzalco, enfocado en el desarrollo de software y la resolución técnica de problemas. Me destaco por ser autodidacta, adaptable y por mi capacidad para comunicar conceptos técnicos complejos de manera clara." 
+               data-en="Computer Engineering student at UAM Azcapotzalco, focused on software development and technical problem-solving. Autodidact, adaptable, and skilled at clearly communicating complex technical concepts.">
+                Estudiante de Ingeniería en Computación en la UAM Azcapotzalco, enfocado en el desarrollo de software y la resolución técnica de problemas. Me destaco por ser autodidacta, adaptable y por mi capacidad para comunicar conceptos técnicos complejos de manera clara.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 space-y-4">
+                <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-2" data-es="Información Personal" data-en="Personal Information">Información Personal</h3>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between"><span class="text-slate-400">Email:</span> <span class="text-indigo-300">yuxavier132015@gmail.com</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">Ubicación:</span> <span>Cuautitlán Izcalli, Estado de México</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">Educación:</span> <span>UAM Azcapotzalco</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">Idiomas:</span> <span>Español (Nativo) | Inglés (Avanzado)</span></div>
+                    <div class="flex justify-between"><span class="text-slate-400">Roles:</span> <span>Software Dev | Systems Analyst | Freelancer</span></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-2 mb-4" data-es="Áreas de Interés" data-en="Interests">Áreas de Interés</h3>
+                <div class="grid grid-cols-2 gap-3 text-center text-xs font-semibold">
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center gap-2">
+                        <i class="fas fa-mobile-alt text-indigo-400 text-xl"></i>
+                        <span>APPS MÓVILES</span>
                     </div>
-                    <div class="p-6 space-y-4">
-                        <div class="flex gap-2">
-                            <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Flutter</span>
-                            <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Dart</span>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center gap-2">
+                        <i class="fas fa-brain text-purple-400 text-xl"></i>
+                        <span>VISIÓN ARTIFICIAL & IA</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center gap-2">
+                        <i class="fas fa-network-wired text-emerald-400 text-xl"></i>
+                        <span>REDES CISCO LAN</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center gap-2">
+                        <i class="fas fa-shield-halved text-red-400 text-xl"></i>
+                        <span>CIBERSEGURIDAD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PORTAFOLIO -->
+    <section id="portafolio" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-white" data-es="PORTAFOLIO" data-en="PORTFOLIO">PORTAFOLIO</h2>
+            <div class="w-12 h-1 bg-indigo-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Proyecto 1: App Pomodoro con Banner -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between group">
+                <div>
+                    <div class="w-full h-52 bg-slate-950 overflow-hidden border-b border-slate-800 relative">
+                        <img src="images/pomodoro.png" alt="Pomodoro App Banner" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex gap-2 text-xs">
+                            <span class="bg-indigo-950 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-800/60 font-mono">Flutter</span>
+                            <span class="bg-indigo-950 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-800/60 font-mono">Dart</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white" data-es="Aplicación Móvil Pomodoro" data-en="Pomodoro Mobile App">Aplicación Móvil Pomodoro</h3>
-                        <p class="text-slate-400 text-sm" data-es="Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido." data-en="Native mobile application for time management and personal productivity, built with Flutter ensuring high performance.">
-                            Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido.
+                        <h3 class="text-2xl font-bold text-white">Aplicación Móvil Pomodoro (Android)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-es="Aplicación móvil nativa para la gestión del tiempo y productividad basada en la técnica Pomodoro, enfocada en un rendimiento fluido." data-en="Native mobile app for time management and productivity based on the Pomodoro technique, built with Flutter for smooth performance.">
+                            Aplicación móvil nativa para la gestión del tiempo y productividad basada en la técnica Pomodoro, enfocada en un rendimiento fluido.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Proyecto 2: Visión Artificial -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 flex flex-col justify-between">
-                <div class="p-6 space-y-4">
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Python</span>
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">OpenCV</span>
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Firebase</span>
+            <!-- Proyecto 2: Visión Artificial e IA -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-white" data-es="Sistema de Visión Artificial" data-en="Computer Vision AI System">Sistema de Visión Artificial</h3>
-                    <p class="text-slate-400 text-sm" data-es="Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube." data-en="Real-time facial detection and recognition with encoded video processing and real-time cloud database integration.">
-                        Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube.
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-purple-950 text-purple-300 px-2.5 py-1 rounded-md border border-purple-800/60 font-mono">Python</span>
+                        <span class="bg-purple-950 text-purple-300 px-2.5 py-1 rounded-md border border-purple-800/60 font-mono">OpenCV</span>
+                        <span class="bg-purple-950 text-purple-300 px-2.5 py-1 rounded-md border border-purple-800/60 font-mono">Firebase</span>
+                        <span class="bg-purple-950 text-purple-300 px-2.5 py-1 rounded-md border border-purple-800/60 font-mono">NumPy</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Sistema de Visión Artificial e IA</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-es="Detección y reconocimiento facial en tiempo real con codificación previa de rostros, cálculo numérico de distancias y validación en Firebase." data-en="Real-time facial detection and recognition system with face encoding, distance calculation via NumPy, and dynamic Firebase validation.">
+                        Detección y reconocimiento facial en tiempo real con codificación previa de rostros, cálculo numérico de distancias y validación en Firebase.
                     </p>
                 </div>
             </div>
 
+            <!-- Proyecto 3: Redes LAN & Cisco -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded-md border border-emerald-800/60 font-mono">Cisco Packet Tracer</span>
+                        <span class="bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded-md border border-emerald-800/60 font-mono">VLANs</span>
+                        <span class="bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded-md border border-emerald-800/60 font-mono">LAN Admin</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Topologías e Infraestructura de Redes LAN</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-es="Diseño, simulación y segmentación de redes de área local (LAN) en Cisco Packet Tracer, con configuración de routers, switches y direccionamiento." data-en="Design, simulation, and segmentation of local area networks (LAN) in Cisco Packet Tracer, including router and switch configuration.">
+                        Diseño, simulación y segmentación de redes de área local (LAN) en Cisco Packet Tracer, con configuración de routers, switches y direccionamiento.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Aplicaciones Web & Bases de Datos -->
+            <div class="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between p-6">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-indigo-950 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-800/60 font-mono">SQL</span>
+                        <span class="bg-indigo-950 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-800/60 font-mono">Java</span>
+                        <span class="bg-indigo-950 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-800/60 font-mono">HTML / CSS</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Sistemas Web y Modelado de Datos SQL</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-es="Sistemas dinámicos respaldados por arquitecturas relacionales en SQL, conectividad de software en Java/Python e interfaces web adaptativas." data-en="Dynamic web systems supported by relational databases in SQL, software connectivity in Java/Python, and responsive web interfaces.">
+                        Sistemas dinámicos respaldados por arquitecturas relacionales en SQL, conectividad de software en Java/Python e interfaces web adaptativas.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4" data-es="¿Listo para iniciar un proyecto?" data-en="Ready to start a project?">¿Listo para iniciar un proyecto?</h2>
-        <p class="text-slate-400 mb-8" data-es="Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente." data-en="Get a quote for your business or contact me for independent technical consulting.">
-            Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://wa.me/525537452943" target="_blank" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
-                <i class="fab fa-whatsapp text-lg"></i> WhatsApp
-            </a>
-            <a href="mailto:yuxavier132015@gmail.com" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
-                <i class="fas fa-envelope text-lg"></i> Email Directo
-            </a>
+    <!-- SECCIÓN CURRÍCULUM -->
+    <section id="curriculum" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-white" data-es="CURRÍCULUM" data-en="RESUME">CURRÍCULUM</h2>
+            <div class="w-12 h-1 bg-indigo-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-indigo-400 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fas fa-graduation-cap"></i> Formación Académica
+                </h3>
+                <div class="border-l-2 border-indigo-500/40 pl-4 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[21px] top-1 w-2.5 h-2.5 bg-indigo-500 rounded-full"></span>
+                        <h4 class="text-lg font-bold text-white">Ingeniería en Computación</h4>
+                        <span class="text-xs text-indigo-400 font-semibold">UAM Azcapotzalco | En curso</span>
+                        <p class="text-slate-400 text-sm mt-2">Formación integral en desarrollo de software, algoritmos, estructuras de datos y sistemas computacionales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fas fa-briefcase"></i> Experiencia Laboral
+                </h3>
+                <div class="border-l-2 border-emerald-500/40 pl-4 space-y-6">
+                    <div class="relative">
+                        <span class="absolute -left-[21px] top-1 w-2.5 h-2.5 bg-emerald-500 rounded-full"></span>
+                        <h4 class="text-lg font-bold text-white">Técnico en Mantenimiento de Cómputo</h4>
+                        <span class="text-xs text-emerald-400 font-semibold">Independiente | 2020 - Presente</span>
+                        <p class="text-slate-400 text-sm mt-2">Diagnóstico, reparación de hardware/software, instalación de sistemas operativos y optimización general de equipos.</p>
+                    </div>
+
+                    <div class="relative">
+                        <span class="absolute -left-[21px] top-1 w-2.5 h-2.5 bg-emerald-500 rounded-full"></span>
+                        <h4 class="text-lg font-bold text-white">Asesor de Inglés</h4>
+                        <span class="text-xs text-emerald-400 font-semibold">Independiente | 2019 - Presente</span>
+                        <p class="text-slate-400 text-sm mt-2">Impartición de clases personalizadas, diseño de material didáctico y seguimiento analítico del progreso de los alumnos.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Language Toggle Script -->
+    <!-- SECCIÓN HABILIDADES TÉCNICAS (CON ESCALADO UNIFORME DE IMÁGENES) -->
+    <section id="habilidades" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-900">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-extrabold text-white" data-es="HABILIDADES TÉCNICAS" data-en="SKILLS">HABILIDADES TÉCNICAS</h2>
+            <div class="w-12 h-1 bg-indigo-500 mx-auto mt-2 rounded"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- 1. LENGUAJES DE PROGRAMACIÓN -->
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2 border-b border-slate-800 pb-3">
+                        <i class="fas fa-code text-indigo-400"></i>
+                        <span data-es="Lenguajes" data-en="Languages">Lenguajes</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/c.png" alt="C/C++" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">C / C++</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/python.png" alt="Python" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Python</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/java.png" alt="Java" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Java</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/dart.png" alt="Dart" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Dart</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/sql.png" alt="SQL" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">SQL</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/html.png" alt="HTML" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">HTML5</span>
+                        </div>
+                        <div class="col-span-2 flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-indigo-500/50 transition">
+                            <img src="images/assembly.png" alt="Assembly" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Assembly / MIPS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. HERRAMIENTAS Y TECNOLOGÍAS -->
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2 border-b border-slate-800 pb-3">
+                        <i class="fas fa-screwdriver-wrench text-purple-400"></i>
+                        <span data-es="Herramientas" data-en="Tools">Herramientas</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/flutter.png" alt="Flutter" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Flutter</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/opencv.png" alt="OpenCV" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">OpenCV</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/firebase.png" alt="Firebase" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Firebase</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/git.png" alt="Git" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Git / GitHub</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/cisco.png" alt="Cisco" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Cisco Packet Tracer</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-purple-500/50 transition">
+                            <img src="images/microsoft.png" alt="Excel" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. COMPETENCIAS Y HABILIDADES BLANDAS -->
+            <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2 border-b border-slate-800 pb-3">
+                        <i class="fas fa-brain text-emerald-400"></i>
+                        <span data-es="Competencias" data-en="Competencies">Competencias</span>
+                    </h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/autodidacta.png" alt="Autodidacta" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Autodidacta" data-en="Self-taught">Autodidacta</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/pensamiento.png" alt="Pensamiento Lógico" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Pensamiento Lógico" data-en="Logical Thinking">Pensamiento Lógico</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/resolucion.png" alt="Resolución" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Resolución Problemas" data-en="Problem Solving">Resolución Problemas</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/comunicacion.png" alt="Comunicación" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Comunicación Técnica" data-en="Tech Comm.">Comunicación Técnica</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/ensenanza.png" alt="Enseñanza" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Enseñanza" data-en="Teaching">Enseñanza</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2.5 bg-slate-950/80 rounded-xl border border-slate-800/80 hover:border-emerald-500/50 transition">
+                            <img src="images/adaptabilidad.png" alt="Adaptabilidad" class="w-6 h-6 object-contain flex-shrink-0">
+                            <span class="text-xs font-medium text-slate-200" data-es="Adaptabilidad" data-en="Adaptability">Adaptabilidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto px-6 py-8 border-t border-slate-900 text-center text-xs text-slate-500">
+        <p>© Xavier Yu Magaña. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS INTERACTIVOS -->
     <script>
         let currentLang = 'es';
         function toggleLanguage() {
@@ -158,130 +382,17 @@
             document.querySelectorAll('[data-es]').forEach(el => {
                 el.innerText = el.getAttribute(`data-${currentLang}`);
             });
+            document.getElementById('lang-btn-text').innerText = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
         }
-    </script>
-</body>
-</html>
-    <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 text-center md:text-left md:flex items-center justify-between">
-        <div class="md:w-3/5 space-y-6">
-            <span class="px-3 py-1 text-xs font-semibold text-indigo-400 bg-indigo-950/60 border border-indigo-800 rounded-full" 
-                  data-es="Disponible para proyectos Freelance y Remotos" 
-                  data-en="Available for Freelance & Remote Projects">
-                  Disponible para proyectos Freelance y Remotos
-            </span>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-                Xavier Yu Magaña
-            </h1>
-            <p class="text-xl text-indigo-300 font-medium" data-es="Analista de Sistemas & Desarrollador de Software" data-en="Systems Analyst & Software Developer">
-                Analista de Sistemas & Desarrollador de Software
-            </p>
-            <p class="text-slate-400 text-base" data-es="Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes." data-en="Specialized in mobile/web development, AI solutions, databases, and network infrastructure.">
-                Especializado en desarrollo móvil/web, soluciones con Inteligencia Artificial, bases de datos e infraestructura de redes.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-                <a href="#contact" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 font-medium text-white transition shadow-lg shadow-indigo-500/20" data-es="Contactar Ahora" data-en="Get in Touch">Contactar Ahora</a>
-                <a href="https://github.com/XYM117" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 font-medium text-slate-200 border border-slate-700 transition flex items-center gap-2">
-                    <i class="fab font-bold fa-github"></i> GitHub
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Servicios Especializados" data-en="Specialized Services">Servicios Especializados</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Servicio 1 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Desarrollo Móvil y Web" data-en="Mobile & Web Development">Desarrollo Móvil y Web</h3>
-                <p class="text-slate-400 text-sm" data-es="Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL." data-en="Cross-platform applications with Flutter and Dart, alongside dynamic web systems powered by Java, Python, and SQL.">
-                    Aplicaciones multiplataforma con Flutter y Dart, además de sistemas web dinámicos respaldados por Java, Python y SQL.
-                </p>
-            </div>
-            <!-- Servicio 2 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Inteligencia Artificial y Datos" data-en="AI & Data Solutions">Inteligencia Artificial y Datos</h3>
-                <p class="text-slate-400 text-sm" data-es="Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase." data-en="Real-time computer vision with OpenCV, numerical data processing, and cloud synchronization with Firebase.">
-                    Integración de visión artificial en tiempo real con OpenCV, procesamiento numérico de datos y sincronización en la nube con Firebase.
-                </p>
-            </div>
-            <!-- Servicio 3 -->
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/60 hover:border-indigo-500 transition">
-                <div class="w-12 h-12 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4 text-2xl">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2" data-es="Redes y Soporte Técnico" data-en="Networks & Tech Support">Redes y Soporte Técnico</h3>
-                <p class="text-slate-400 text-sm" data-es="Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad." data-en="LAN network design and simulation in Cisco Packet Tracer, hardware/software optimization, and security audits.">
-                    Diseño y simulación de redes LAN en Cisco Packet Tracer, optimización de hardware/software y auditoría básica de seguridad.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
-        <h2 class="text-3xl font-bold text-white mb-12 text-center" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Proyecto 1 -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
-                <div class="p-6 space-y-4">
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Flutter</span>
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Dart</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white" data-es="Aplicación Móvil Pomodoro" data-en="Pomodoro Mobile App">Aplicación Móvil Pomodoro</h3>
-                    <p class="text-slate-400 text-sm" data-es="Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido." data-en="Native mobile application for time management and personal productivity, built with Flutter ensuring high performance.">
-                        Aplicación móvil nativa para la gestión del tiempo y la productividad personal, construida en Flutter para garantizar un rendimiento fluido.
-                    </p>
-                </div>
-            </div>
-            <!-- Proyecto 2 -->
-            <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
-                <div class="p-6 space-y-4">
-                    <div class="flex gap-2">
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Python</span>
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">OpenCV</span>
-                        <span class="text-xs bg-indigo-900/60 text-indigo-300 px-2 py-1 rounded">Firebase</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white" data-es="Sistema de Visión Artificial" data-en="Computer Vision AI System">Sistema de Visión Artificial</h3>
-                    <p class="text-slate-400 text-sm" data-es="Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube." data-en="Real-time facial detection and recognition with encoded video processing and real-time cloud database integration.">
-                        Detección y reconocimiento facial en tiempo real con transmisión de video codificada y consulta de base de datos en tiempo real en la nube.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4" data-es="¿Listo para iniciar un proyecto?" data-en="Ready to start a project?">¿Listo para iniciar un proyecto?</h2>
-        <p class="text-slate-400 mb-8" data-es="Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente." data-en="Get a quote for your business or contact me for independent technical consulting.">
-            Cotiza una solución para tu empresa o contáctame para consultoría técnica independiente.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="https://wa.me/525537452943" target="_blank" class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
-                <i class="fab fa-whatsapp text-lg"></i> WhatsApp
-            </a>
-            <a href="mailto:yuxavier132015@gmail.com" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg flex items-center gap-2 transition">
-                <i class="fas fa-envelope text-lg"></i> Email Directo
-            </a>
-        </div>
-    </section>
-
-    <!-- Language Toggle Script -->
-    <script>
-        let currentLang = 'es';
-        function toggleLanguage() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            document.querySelectorAll('[data-es]').forEach(el => {
-                el.innerText = el.getAttribute(`data-${currentLang}`);
+        function copyEmail() {
+            const email = "yuxavier132015@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const icon = document.getElementById("copy-icon");
+                icon.className = "fas fa-check text-emerald-400";
+                setTimeout(() => {
+                    icon.className = "fas fa-copy text-indigo-400";
+                }, 2000);
             });
         }
     </script>
